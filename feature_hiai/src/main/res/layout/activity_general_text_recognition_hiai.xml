@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~   Copyright 2020. Explore in HMS. All rights reserved.
+  ~
+  ~   Licensed under the Apache License, Version 2.0 (the "License");
+  ~   You may not use this file except in compliance with the License.
+  ~   You may obtain a copy of the License at
+  ~
+  ~   http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~   Unless required by applicable law or agreed to in writing, software
+  ~   distributed under the License is distributed on an "AS IS" BASIS,
+  ~   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~   See the License for the specific language governing permissions and
+  ~   limitations under the License.
+  ~
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_general_text_recognition_hiai"
+        style="@style/ToolbarAppearance.ExploreHMS.Normal"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/txt_general_text_recognition_hiai" />
+
+    <ScrollView
+        android:id="@+id/sv_general_text_recognition"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dimens_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_general_text_recognition_hiai">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_general_text_recognition_info_title"
+                style="@style/TextAppearance.ExploreHMS.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dimens_16"
+                android:layout_marginTop="@dimen/dimens_16"
+                android:layout_marginEnd="@dimen/dimens_16"
+                android:gravity="start"
+                android:text="@string/txt_service_introduction"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_general_text_recognition_info"
+                style="@style/TextAppearance.ExploreHMS.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dimens_16"
+                android:layout_marginTop="@dimen/dimens_16"
+                android:layout_marginEnd="@dimen/dimens_16"
+                android:background="@color/white"
+                android:gravity="start"
+                android:text="@string/msg_general_text_recognition_hiai"
+                app:layout_constraintTop_toBottomOf="@+id/tv_general_text_recognition_info_title" />
+
+            <View
+                android:id="@+id/seperator_general_text_recognition_hiai_info"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/dimens_16"
+                android:layout_marginTop="@dimen/dimens_16"
+                android:layout_marginEnd="@dimen/dimens_16"
+                android:background="@color/colorGray1HiAi"
+                app:layout_constraintTop_toBottomOf="@+id/tv_general_text_recognition_info">
+
+            </View>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_general_text_recognition_gallery"
+                style="@style/ButtonAppearance.ExploreHMS.Normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens_16"
+                android:layout_marginTop="@dimen/dimens_16"
+                android:layout_marginEnd="@dimen/dimens_16"
+                android:layout_marginBottom="@dimen/dimens_16"
+                android:drawableEnd="@drawable/icon_gallery_24_hiai"
+                android:text="@string/txt_gallery_hiai"
+                app:layout_constraintEnd_toStartOf="@id/btn_general_text_recognition_camera"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/seperator_general_text_recognition_hiai_info" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_general_text_recognition_camera"
+                style="@style/ButtonAppearance.ExploreHMS.Normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_16"
+                android:layout_marginEnd="@dimen/dimens_16"
+                android:layout_marginBottom="@dimen/dimens_16"
+                android:drawableEnd="@drawable/icon_camera_24_hiai"
+                android:text="@string/txt_camera_hiai"
+                app:layout_constraintBottom_toBottomOf="@id/btn_general_text_recognition_gallery"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_general_text_recognition_gallery"
+                app:layout_constraintTop_toTopOf="@id/btn_general_text_recognition_gallery" />
+
+            <ImageView
+                android:id="@+id/iv_general_text_recognition_image"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="@dimen/dimens_16"
+                android:background="@drawable/view_border_black_white_back_hiai"
+                android:padding="@dimen/dimens_16"
+                android:src="@drawable/image_text_hiai"
+                app:layout_constraintTop_toBottomOf="@+id/btn_general_text_recognition_camera" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_general_text_recognition_run"
+                style="@style/ButtonAppearance.ExploreHMS.Normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens_16"
+                android:layout_marginTop="@dimen/dimens_16"
+                android:layout_marginEnd="@dimen/dimens_16"
+                android:text="@string/txt_run_service_hiai"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_general_text_recognition_image" />
+
+            <LinearLayout
+                android:id="@+id/ll_general_text_recognition_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimens_16"
+                android:background="@drawable/view_light_border_light_gray_arengine"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/btn_general_text_recognition_run">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.ExploreHMS.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dimens_16"
+                    android:gravity="center"
+                    android:text="@string/txt_result_hiai" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimens_1"
+                    android:background="@color/colorGray1HiAi" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.ExploreHMS.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dimens_16"
+                    android:gravity="start"
+                    android:text="@string/txt_general_text_recognition_text_value_hiai" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_general_text_recognition_result_text"
+                    style="@style/TextAppearance.ExploreHMS.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dimens_16"
+                    android:layout_marginEnd="@dimen/dimens_16"
+                    android:layout_marginBottom="@dimen/dimens_16"
+                    android:gravity="start" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorGray1HiAi" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.ExploreHMS.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dimens_16"
+                    android:gravity="start"
+                    android:text="@string/txt_general_text_recognition_lang_hiai" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_general_text_recognition_result_language"
+                    style="@style/TextAppearance.ExploreHMS.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dimens_16"
+                    android:layout_marginEnd="@dimen/dimens_16"
+                    android:layout_marginBottom="@dimen/dimens_16"
+                    android:gravity="start" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimens_1"
+                    android:background="@color/colorGray1HiAi" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimens_1"
+                    android:background="@color/colorGray1HiAi" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.ExploreHMS.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dimens_16"
+                    android:gravity="start"
+                    android:text="@string/txt_general_text_recognition_result_image_hiai" />
+
+                <ImageView
+                    android:id="@+id/iv_general_text_recognition_result_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_marginStart="@dimen/dimens_16"
+                    android:layout_marginEnd="@dimen/dimens_16"
+                    android:layout_marginBottom="@dimen/dimens_16"
+                    android:background="@drawable/view_border_black_white_back_hiai"
+                    android:padding="@dimen/dimens_16"
+                    android:src="@drawable/image_text_hiai"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_document_skew_correction_camera" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

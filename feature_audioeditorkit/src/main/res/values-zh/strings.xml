@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="setting">设置</string>
+    <string name="cancels">取消</string>
+    <string name="select_none_video">未选择视频</string>
+    <string name="extract_success">音频提取成功：%s</string>
+    <string name="extract_fail">音频提取失败</string>
+
+    <string name="file_not_avable">该文件不可用</string>
+    <string name="dm_extract_cancel">取消</string>
+
+    <string name="audio_format_mp3">MP3</string>
+    <string name="audio_format_wav">WAV</string>
+    <string name="audio_format_m4a">M4A</string>
+    <string name="transfer_btn">转换</string>
+    <string name="save_path">存储至 %s</string>
+</resources>
