@@ -33,7 +33,7 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 28
+        minSdkVersion 29
         targetSdkVersion 30
         versionCode gradleVersionCode
         versionName gradleVersionName
@@ -45,7 +45,7 @@ android {
 
 dependencies {
     implementation project(":app")
-    implementation 'com.huawei.hms:identity:6.4.0.302'
+    implementation 'com.huawei.hms:identity:6.13.0.300'
 }
 
 /*apply from: '../sonarqube.gradle'
